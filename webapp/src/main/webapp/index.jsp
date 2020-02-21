@@ -86,9 +86,9 @@ body, html {
 <!-- Container (About Section) -->
 <div class="w3-content w3-container w3-padding-64" id="about">
   <h3 class="w3-center">ABOUT ME</h3>
-  <p class="w3-center"><em>ÉLEVE INGÉNIEUR EN TÉLÉCOMMUNICATIONS À SUPCOM</em></p>
-  <p>Ce site web est dans le cadre d'un projet de fin d'études à 3S(Standard Sharing Software) dans le sujet : Conception et mise en place d'une plateforme CI/CD pour les applications web multi-services.Ce sujet d'ailleurs implique la notion et la méthodologie
-     de travail DEVOPS.En effet, on a arrivé a développé une plateforme et une architecture allant du code jusqu'à le dernier déploiement en passant par Git et Jenkins le moteur de notre plateforme, puis le passage par Ansible qui va désigner des roles aux 
+  <p class="w3-center"><em>ELEVE INGÉNIEUR EN TELECOMMUNICATIONS A SUP'COM</em></p>
+  <p>Ce site web est dans le cadre d'un projet de fin d'etudes à 3S(Standard Sharing Software) dans le sujet : Conception et mise en place d'une plateforme CI/CD pour les applications web multi-services.Ce sujet d'ailleurs implique la notion et la methodologie
+     de travail DEVOPS.En effet, on a arrive a developpe une plateforme et une architecture allant du code jusqu'a le dernier deploiement en passant par Git et Jenkins le moteur de notre plateforme, puis le passage par Ansible qui va designer des roles aux 
      instances contenant Docker et les nodes de Kubernetes et kubernetes master, Ainsi, il y a un autre role qu'il push une image vers DockerHub. </p>
   <div class="w3-row">
     <div class="w3-col m6 w3-center w3-padding-large">
@@ -98,8 +98,8 @@ body, html {
 
     <!-- Hide this text on small devices -->
     <div class="w3-col m6 w3-hide-small w3-padding-large">
-      <p>Je suis Ayoub BERGAOUI éléve ingénieur en télécommunications à Sup'Com, Je suis quelqu'un d'ambitieux, passionné par les domaines réseau,informatique et télécommunications. J'apprécie à travailler en DEVOPS et faire l'architecture d'une plateforme CI/CD et ensuite 
-         assurer le monitoring de cette plateforme.Je suis aussi passionné par les réseaux et le nouveau né SDN dans le monde des réseaux...
+      <p>Je suis Ayoub BERGAOUI eleve ingénieur en telecommunications a Sup'Com, Je suis quelqu'un d'ambitieux, passionne par les domaines reseau,informatique et telecommunications. J'apprecie a travailler en DEVOPS et faire l'architecture d'une plateforme CI/CD et ensuite 
+         assurer le monitoring de cette plateforme.Je suis aussi passionne par les reseaux et le nouveau ne SDN dans le monde des reseaux...
       </p>
     </div>
   </div>
