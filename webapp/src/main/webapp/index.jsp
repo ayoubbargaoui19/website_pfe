@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>W3.CSS Template</title>
+<title>PFE AYOUB</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -86,21 +86,21 @@ body, html {
 <!-- Container (About Section) -->
 <div class="w3-content w3-container w3-padding-64" id="about">
   <h3 class="w3-center">ABOUT ME</h3>
-  <p class="w3-center"><em>I love photography</em></p>
-  <p>We have created a fictional "personal" website/blog, and our fictional character is a hobby photographer. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-    qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p class="w3-center"><em>ÉLEVE INGÉNIEUR EN TÉLÉCOMMUNICATIONS À SUPCOM</em></p>
+  <p>Ce site web est dans le cadre d'un projet de fin d'études à 3S(Standard Sharing Software) dans le sujet : Conception et mise en place d'une plateforme CI/CD pour les applications web multi-services.Ce sujet d'ailleurs implique la notion et la méthodologie
+     de travail DEVOPS.En effet, on a arrivé a développé une plateforme et une architecture allant du code jusqu'à le dernier déploiement en passant par Git et Jenkins le moteur de notre plateforme, puis le passage par Ansible qui va désigner des roles aux 
+     instances contenant Docker et les nodes de Kubernetes et kubernetes master, Ainsi, il y a un autre role qu'il push une image vers DockerHub. </p>
   <div class="w3-row">
     <div class="w3-col m6 w3-center w3-padding-large">
-      <p><b><i class="fa fa-user w3-margin-right"></i>My Name</b></p><br>
-      <img src="/w3images/avatar_hat.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500" height="333">
+      <p><b><i class="fa fa-user w3-margin-right"></i>Ayoub BERGAOUI</b></p><br>
+      <img src="maphoto.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500" height="333">
     </div>
 
     <!-- Hide this text on small devices -->
     <div class="w3-col m6 w3-hide-small w3-padding-large">
-      <p>Welcome to my website. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
-        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p>Je suis Ayoub BERGAOUI éléve ingénieur en télécommunications à Sup'Com, Je suis quelqu'un d'ambitieux, passionné par les domaines réseau,informatique et télécommunications. J'apprécie à travailler en DEVOPS et faire l'architecture d'une plateforme CI/CD et ensuite 
+         assurer le monitoring de cette plateforme.Je suis aussi passionné par les réseaux et le nouveau né SDN dans le monde des réseaux...
+      </p>
     </div>
   </div>
   <p class="w3-large w3-center w3-padding-16">Im really good at:</p>
