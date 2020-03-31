@@ -98,9 +98,17 @@ body, html {
 
     <!-- Hide this text on small devices -->
     <div class="w3-col m6 w3-hide-small w3-padding-large">
-      <p>Je suis Ayoub BERGAOUI eleve ingénieur en telecommunications a Sup'Com, Je suis quelqu'un d'ambitieux, passionne par les domaines reseau,informatique et telecommunications. J'apprecie a travailler en DEVOPS et faire l'architecture d'une plateforme CI/CD et ensuite 
-         assurer le monitoring de cette plateforme.Je suis aussi passionne par les reseaux et le nouveau ne SDN dans le monde des reseaux...
-      </p>
+      <p>Je suis Ayoub BERGAOUI eleve ingénieur en telecommunications a Sup'Com.</p>
+      <p>Cette solution s’articule autour de 2 parties : <br> <br>
+        •	La première partie c’est la partie d’intégration continue, où il y aura la mise en place d’un serveur d’orchestration Jenkins, un serveur gestion de dépôt Nexus et un serveur de contrôle qualité du code Sonar. 
+        <br>
+        •	La deuxième partie c’est pour la partie de déploiement et la livraison continue. Il s’agit de mettre en place un serveur Ansible, un serveur Docker d’une part et d’autres part 4 serveurs Kubernetes (1 master et 3 nœuds).
+        <br>
+        •	La solution ne s’arrête pas là, il y aura par la suite des scripts d’automatisation développés sous forme de playbooks sur Ansible.<br>
+        L’objectif de ce projet est d’introduire la culture du déploiement continu ou ce qu’on appelle 
+        aujourd’hui DevOps et essayer de casser cette barrière du fonctionnement en silo. En effet, 
+        une démarche DevOps vous fera gagner du temps voire beaucoup de temps.<br> ********************** Enjoy your visit ;) ********************
+        </p>
     </div>
   </div>
   <p class="w3-large w3-center w3-padding-16">Im really good at:</p>
@@ -139,69 +147,126 @@ body, html {
 
 <!-- Second Parallax Image with Portfolio Text -->
 <div class="bgimg-2 w3-display-container w3-opacity-min">
+  <img src="https://www.jakpost.travel/wimages/large/161-1613398_demo-video-devops-aws-and-devops.jpg" style="width:100%" class="w3-hover-opacity" alt="Git">
   <div class="w3-display-middle">
-    <span class="w3-xxlarge w3-text-white w3-wide">PORTFOLIO</span>
+    <span class="w3-xxlarge w3-text-white w3-wide"></span>
   </div>
 </div>
 
 <!-- Container (Portfolio Section) -->
 <div class="w3-content w3-container w3-padding-64" id="portfolio">
   <h3 class="w3-center">MY WORK</h3>
-  <p class="w3-center"><em>Here are some of my latest lorem work ipsum tipsum.<br> Click on the images to make them bigger</em></p><br>
+  <p class="w3-center"><em>Here are some of my latest lorem work ipsum tipsum.<br> Click on the images to push on servers </em></p><br>
 
   <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
   <div class="w3-row-padding w3-center">
     <div class="w3-col m3">
-      <img src="/w3images/p1.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist over the mountains">
+      <a href="https://www.google.com" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Jenkins_logo.svg/1200px-Jenkins_logo.svg.png" style="width:100%" class="w3-hover-opacity" alt="Git">
+      </a>
     </div>
 
     <div class="w3-col m3">
-      <img src="/w3images/p2.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Coffee beans">
+      <a href="https://github.com/ayoubbargaoui19/website_pfe" target="_blank">
+      <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" style="width:100%"  class="w3-hover-opacity" alt="Git">
+      </a>
     </div>
 
     <div class="w3-col m3">
-      <img src="/w3images/p3.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Bear closeup">
+      <a href="https://www.google.com" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Ansible_logo.svg/1200px-Ansible_logo.svg.png" style="width:100%" class="w3-hover-opacity" alt="Ansible">
+      </a>
     </div>
 
     <div class="w3-col m3">
-      <img src="/w3images/p4.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Quiet ocean">
+      <a href="https://www.google.com" target="_blank">
+      <img src="https://www.docker.com/sites/default/files/d8/2019-07/vertical-logo-monochromatic.png" style="width:100%" class="w3-hover-opacity" alt="Docker">
+      </a>
     </div>
   </div>
 
   <div class="w3-row-padding w3-center w3-section">
     <div class="w3-col m3">
-      <img src="/w3images/p5.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist">
+      <a href="https://www.google.com" target="_blank">
+      <img src="https://logos-download.com/wp-content/uploads/2018/09/Kubernetes_Logo.png" style="width:100%" class="w3-hover-opacity" alt="Docker">
+      </a>
     </div>
 
     <div class="w3-col m3">
-      <img src="/w3images/p6.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="My beloved typewriter">
+      <a href="https://www.google.com" target="_blank">
+      <img src="https://i.pinimg.com/originals/1c/c0/7a/1cc07a1ebac447213742940dd1ed2abe.jpg" style="width:100%" class="w3-hover-opacity" alt="Sonarqube">
+      </a>
     </div>
 
     <div class="w3-col m3">
-      <img src="/w3images/p7.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Empty ghost train">
+      <a href="https://www.google.com" target="_blank">
+      <img src="https://xebialabs.com/wp-content/uploads/files/plugins/nexus.jpg" style="width:100%" class="w3-hover-opacity" alt="Nexus">
+      </a>
     </div>
 
     <div class="w3-col m3">
-      <img src="/w3images/p8.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Sailing">
+      <a href="https://www.google.com" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Tomcat-logo.svg/1280px-Tomcat-logo.svg.png" style="width:100%" class="w3-hover-opacity" alt="Tomcat">
+      </a>
     </div>
-    <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">LOAD MORE</button>
+    
+  </div>
+  
+</div>
+<!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+<div class="w3-row-padding w3-center">
+  <div class="w3-col m3">
+    <a href="https://www.google.com" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Jenkins_logo.svg/1200px-Jenkins_logo.svg.png" style="width:100%" class="w3-hover-opacity" alt="Git">
+    </a>
+  </div>
+
+  <div class="w3-col m3">
+    <a href="https://github.com/ayoubbargaoui19/website_pfe" target="_blank">
+    <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" style="width:100%"  class="w3-hover-opacity" alt="Git">
+    </a>
+  </div>
+
+  <div class="w3-col m3">
+    <a href="https://www.google.com" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Ansible_logo.svg/1200px-Ansible_logo.svg.png" style="width:100%" class="w3-hover-opacity" alt="Ansible">
+    </a>
+  </div>
+
+  <div class="w3-col m3">
+    <a href="https://www.google.com" target="_blank">
+    <img src="https://www.docker.com/sites/default/files/d8/2019-07/vertical-logo-monochromatic.png" style="width:100%" class="w3-hover-opacity" alt="Docker">
+    </a>
   </div>
 </div>
 
-<!-- Modal for full size images on click-->
-<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
-  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
-  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-    <img id="img01" class="w3-image">
-    <p id="caption" class="w3-opacity w3-large"></p>
+<div class="w3-row-padding w3-center w3-section">
+  <div class="w3-col m3">
+    <a href="https://www.google.com" target="_blank">
+    <img src="https://logos-download.com/wp-content/uploads/2018/09/Kubernetes_Logo.png" style="width:100%" class="w3-hover-opacity" alt="Docker">
+    </a>
   </div>
+
+  <div class="w3-col m3">
+    <a href="https://www.google.com" target="_blank">
+    <img src="https://i.pinimg.com/originals/1c/c0/7a/1cc07a1ebac447213742940dd1ed2abe.jpg" style="width:100%" class="w3-hover-opacity" alt="Sonarqube">
+    </a>
+  </div>
+
+  <div class="w3-col m3">
+    <a href="https://www.google.com" target="_blank">
+    <img src="https://xebialabs.com/wp-content/uploads/files/plugins/nexus.jpg" style="width:100%" class="w3-hover-opacity" alt="Nexus">
+    </a>
+  </div>
+
+  <div class="w3-col m3">
+    <a href="https://www.google.com" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Tomcat-logo.svg/1280px-Tomcat-logo.svg.png" style="width:100%" class="w3-hover-opacity" alt="Tomcat">
+    </a>
+  </div>
+  
 </div>
 
-<!-- Third Parallax Image with Portfolio Text -->
-<div class="bgimg-3 w3-display-container w3-opacity-min">
-  <div class="w3-display-middle">
-     <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
-  </div>
 </div>
 
 <!-- Container (Contact Section) -->
@@ -211,7 +276,7 @@ body, html {
 
   <div class="w3-row w3-padding-32 w3-section">
     <div class="w3-col m4 w3-container">
-      <img src="/w3images/map.jpg" class="w3-image w3-round" style="width:100%">
+      <img src="https://www.keejob.com/media/recruiter/recruiter_19891/logo-19891-20191202-161915.jpg" class="w3-image w3-round" style="width:100%">
     </div>
     <div class="w3-col m8 w3-panel">
       <div class="w3-large w3-margin-bottom">
@@ -249,7 +314,8 @@ body, html {
     <i class="fa fa-twitter w3-hover-opacity"></i>
     <i class="fa fa-linkedin w3-hover-opacity"></i>
   </div>
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">:</a></p>
+  <img src="https://www.3s.com.tn/wp-content/uploads/2016/12/logo-footer.png" class="w3-image w3-round" style="width:8%" >
 </footer>
  
 <script>
