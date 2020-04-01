@@ -1,3 +1,3 @@
-# maven-project
+# Projet DevOps - PFE 
 
-Simple Maven Project
+C'est la plateforme qui va gérer la pipeline DevOps.
