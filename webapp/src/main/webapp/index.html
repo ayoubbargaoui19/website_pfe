@@ -1,375 +1,488 @@
 <!DOCTYPE html>
 <html>
-<title>PFE AYOUB</title>
+<title>3S DEVOPS PROJECT</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
-body, html {
-  height: 100%;
-  color: #777;
-  line-height: 1.8;
-}
-
-/* Create a Parallax Effect */
-.bgimg-1, .bgimg-2, .bgimg-3 {
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-/* First image (Logo. Full height) */
-.bgimg-1 {
-  background-image: url('logo1.jpg');
-  min-height: 100%;
-}
-
-/* Second image (Portfolio) */
-.bgimg-2 {
-  background-image: url("/w3images/parallax2.jpg");
-  min-height: 400px;
-}
-
-/* Third image (Contact) */
-.bgimg-3 {
-  background-image: url("/w3images/parallax3.jpg");
-  min-height: 400px;
-}
-
-.w3-wide {letter-spacing: 10px;}
-.w3-hover-opacity {cursor: pointer;}
-
-/* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-device-width: 1600px) {
-  .bgimg-1, .bgimg-2, .bgimg-3 {
-    background-attachment: scroll;
-    min-height: 400px;
-  }
-}
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px;background: #222;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
 </style>
-<body>
+<body class="w3-black">
 
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar" id="myNavbar">
-    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-      <i class="fa fa-bars"></i>
-    </a>
-    <a href="#home" class="w3-bar-item w3-button">HOME</a>
-    <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
-    <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> SERVERS</a>
-    <a href="#execute" class="w3-bar-item w3-button w3-hide-small"><em class="fa fa-th"></em> EXECUTION</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
-      <i class="fa fa-search"></i>
-    </a>
-  </div>
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <!-- Avatar image in top left corner -->
+  <img src="https://www.3s.com.tn/wp-content/uploads/2016/12/logo-footer.png" style="width:100%">
+  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>HOME</p>
+  </a>
+  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-user w3-xxlarge"></i>
+    <p>ABOUT</p>
+  </a>
+  <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="	fa fa-amazon w3-xxlarge"></i>
+    <p>SERVERS</p>
+  </a>
+  <a href="#JOBS" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-th w3-xxlarge"></i>
+    <p>JOBS</p>
+  </a>
 
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
-    <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
-    <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
-    <a href="#" class="w3-bar-item w3-button">SEARCH</a>
+  <a href="#scripts" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-copy w3-xxlarge"></i> 
+    <p>SCRIPTS</p>
+  </a>
+
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-envelope w3-xxlarge"></i>
+    <p>CONTACT</p>
+  </a>
+  
+</nav>
+
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
+    <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">SERVERS</a>
+    <a href="#JOBS" class="w3-bar-item w3-button" style="width:25% !important">JOBS</a>
+    <a href="#scripts" class="w3-bar-item w3-button" style="width:25% !important">SCRIPTS</a>
+    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
   </div>
 </div>
 
-<!-- First Parallax Image with Logo Text -->
-<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
-  <div class="w3-display-middle" style="white-space:nowrap;">
-  </div>
-</div>
+<!-- Page Content -->
+<div class="w3-padding-large" id="main">
+  <!-- Header/Home -->
+  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+    <h1 class="w3-jumbo"><span class="w3-hide-small">Projet</span> De Fin d'études</h1>
+    <h2>DevOps Project : CI/CD Pipeline</h2>
+    <img src="ayoub.jpg" alt="boy" class="w3-image" width="992" height="1108">
+  </header>
 
-<!-- Container (About Section) -->
-<div class="w3-content w3-container w3-padding-64" id="about">
-  <h3 class="w3-center">ABOUT ME</h3>
-  <p class="w3-center"><em>ELEVE INGÉNIEUR EN TELECOMMUNICATIONS A SUP'COM</em></p>
-  <p>Ce site web est dans le cadre d'un projet de fin d'etudes à 3S(Standard Sharing Software) dans le sujet : Conception et mise en place d'une plateforme CI/CD pour les applications web multi-services.Ce sujet d'ailleurs implique la notion et la methodologie
-     de travail DEVOPS.En effet, on a arrive a developpe une plateforme et une architecture allant du code jusqu'a le dernier deploiement en passant par Git et Jenkins le moteur de notre plateforme, puis le passage par Ansible qui va designer des roles aux 
-     instances contenant Docker et les nodes de Kubernetes et kubernetes master, Ainsi, il y a un autre role qu'il push une image vers DockerHub. </p>
-  <div class="w3-row">
-    <div class="w3-col m6 w3-center w3-padding-large">
-      <p><b><i class="fa fa-user w3-margin-right"></i>Ayoub BERGAOUI</b></p><br>
-      <img src="ayoub.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500" height="333">
+  <!-- About Section -->
+  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+    <h2 class="w3-text-light-grey">STANDARD SHARING SOFTWARE DEVOPS PROJECT</h2>
+    <hr style="width:200px" class="w3-opacity">
+    <p>Ce site web est dans le cadre d'un projet de fin d'etudes à 3S(Standard Sharing Software) dans le sujet : Conception et mise en place d'une plateforme CI/CD pour les applications web multi-services.Ce sujet d'ailleurs implique la notion et la methodologie
+      de travail DEVOPS.En effet, on a arrive a developpe une plateforme et une architecture allant du code jusqu'a le dernier deploiement en passant par Git et Jenkins le moteur de notre plateforme, puis le passage par Ansible qui va designer des roles aux 
+      instances contenant Docker et les nodes de Kubernetes et kubernetes master, Ainsi, il y a un autre role qu'il push une image vers DockerHub.
+    </p>
+    <h3 class="w3-padding-16 w3-text-light-grey">CE PROJET PORTE SUR CES AXES :</h3>
+    <p class="w3-wide">CONTINUOUS INTEGRATION</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:95%"></div>
     </div>
-
-    <!-- Hide this text on small devices -->
-    <div class="w3-col m6 w3-hide-small w3-padding-large">
-      <p>Je suis Ayoub BERGAOUI eleve ingénieur en telecommunications a Sup'Com.</p>
-      <p>Cette solution s’articule autour de 2 parties : <br> <br>
-        •	La première partie c’est la partie d’intégration continue, où il y aura la mise en place d’un serveur d’orchestration Jenkins, un serveur gestion de dépôt Nexus et un serveur de contrôle qualité du code Sonar. 
-        <br>
-        •	La deuxième partie c’est pour la partie de déploiement et la livraison continue. Il s’agit de mettre en place un serveur Ansible, un serveur Docker d’une part et d’autres part 4 serveurs Kubernetes (1 master et 3 nœuds).
-        <br>
-        •	La solution ne s’arrête pas là, il y aura par la suite des scripts d’automatisation développés sous forme de playbooks sur Ansible.<br>
-        L’objectif de ce projet est d’introduire la culture du déploiement continu ou ce qu’on appelle 
-        aujourd’hui DevOps et essayer de casser cette barrière du fonctionnement en silo. En effet, 
-        une démarche DevOps vous fera gagner du temps voire beaucoup de temps.<br> ********************** Enjoy your visit ;) ********************
-        </p>
+    <p class="w3-wide">CONTINUOUS DEPLOYMENT</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:85%"></div>
     </div>
-  </div>
-  <p class="w3-large w3-center w3-padding-16"></p>
-  <p class="w3-wide"><i class="fa fa-camera"></i></p>
-  <div class="w3-light-grey">
-    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>
-  </div>
+    <p class="w3-wide">NETWORKING, CLOUD COMPUTING (AWS)</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:80%"></div>
+    </div><br>
+    
+    <div class="w3-row w3-center w3-padding-16 w3-section w3-light-grey">
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">8+</span><br>
+        JOBS TO EXECUTE
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">15+</span><br>
+        USED TOOLS
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">10+</span><br>
+        PLAYBOOKS, SCRIPTS
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">3+</span><br>
+        DEPLOYMENTS NODES
+      </div>
+    </div>
+    
+    <!-- Grid for pricing tables -->
+    <h3 class="w3-padding-16 w3-text-light-grey">TOOLS COST ON AWS</h3>
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-half w3-margin-bottom">
+        <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
+          <li class="w3-dark-grey w3-xlarge w3-padding-32">CONTINUOUS INTEGRATION</li>
+          <li class="w3-padding-16">GIT(GitHub, GitLab, BITBUCKET, ...)</li>
+          <li class="w3-padding-16">JENKINS</li>
+          <li class="w3-padding-16">SONARQUBE WITH POSTGRESQL</li>
+          <li class="w3-padding-16">NEXUS</li>
+          <li class="w3-padding-16">
+            <h2>$ 15</h2>
+            <span class="w3-opacity">PER MONTH ON AWS</span>
+          </li>
+          <li class="w3-light-grey w3-padding-24">
+            <a href="https://fr.scribd.com/document/461295355/Deployment-Diagram" target="_blank">
+            <button class="w3-button w3-white w3-padding-large w3-hover-black">MORE DETAILS</button> </a>
+          </li>
+        </ul>
+      </div>
 
-  <div class="w3-light-grey">
-    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:85%">85%</div>
+      <div class="w3-half">
+        <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
+          <li class="w3-dark-grey w3-xlarge w3-padding-32">CONTINUOUS DEPLOYMENT</li>
+          <li class="w3-padding-16">ANSIBLE</li>
+          <li class="w3-padding-16">TOMCAT</li>
+          <li class="w3-padding-16">DOCKER</li>
+          <li class="w3-padding-16">KUBERNETES</li>
+          <li class="w3-padding-16">
+            <h2>$ 20</h2>
+            <span class="w3-opacity">PER MONTH ON AWS</span>
+          </li>
+          <li class="w3-light-grey w3-padding-24">
+            <a href="https://fr.scribd.com/document/461295355/Deployment-Diagram" target="_blank">
+              <button class="w3-button w3-white w3-padding-large w3-hover-black">MORE DETAILS</button> </a>
+          </li>
+        </ul>
+      </div>
+    <!-- End Grid/Pricing tables -->
+    </div>
+    
+    <!-- Testimonials -->
+    <h3 class="w3-padding-24 w3-text-light-grey">My Reputation</h3>  
+    <img src="ayoub13.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
+    <p><span class="w3-large w3-margin-right">BERGAOUI AYOUB.</span> INTERN ENGINEER</p>
+    <p>Future engineer graduated from supcom.</p><br>
+  
+  <!-- End About Section -->
   </div>
   
-  <div class="w3-light-grey">
-    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:75%">75%</div>
-  </div>
-</div>
+  <!-- Portfolio Section -->
+  <div class="w3-padding-64 w3-content" id="photos">
+    <h2 class="w3-text-light-grey">ACCESS TO OUR SERVERS HERE !</h2>
+    <p>In this section you will find attached all servers of our pipeline project.
+      <br> As a result, you can access these servers more easily without having to open the AWS platform each time. 
+      <br> *********************************** JUST CLICK ON IMAGES BELLOW AND YOU WILL GET PUSHED ! ***********************************</p> 
+    <hr style="width:200px" class="w3-opacity">
 
-<div class="w3-row w3-center w3-dark-grey w3-padding-16">
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">14+</span><br>
-    
-  </div>
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">55+</span><br>
-    
-  </div>
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">89+</span><br>
-    
-  </div>
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">150+</span><br>
-    
-  </div>
-</div>
-
-<!-- Second Parallax Image with Portfolio Text -->
-<div class="bgimg-2 w3-display-container w3-opacity-min">
-  <img src="https://www.jakpost.travel/wimages/large/161-1613398_demo-video-devops-aws-and-devops.jpg" style="width:100%" class="w3-hover-opacity" alt="Git">
-  <div class="w3-display-middle">
-    <span class="w3-xxlarge w3-text-white w3-wide"></span>
-  </div>
-</div>
-
-<!-- Container (Portfolio Section) -->
-<div class="w3-content w3-container w3-padding-64" id="portfolio">
-  <h3 class="w3-center">MY WORK</h3>
-  <p class="w3-center"><em>Here are how to access to our servers from this platform <br> Click on the images to push on servers </em></p><br>
-
-  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+    <!-- Grid for photos -->
+     <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
   <div class="w3-row-padding w3-center">
     <div class="w3-col m3">
       <a href="http://52.70.29.87:8080/" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Jenkins_logo.svg/1200px-Jenkins_logo.svg.png" style="width:100%" class="w3-hover-opacity" alt="Git">
+      <img src="jenkins.png" style="width:100%" class="w3-hover-opacity" alt="Git">
       </a>
+      <h2>JENKINS</h2>
     </div>
 
     <div class="w3-col m3">
       <a href="https://github.com/ayoubbargaoui19/website_pfe" target="_blank">
-      <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" style="width:100%"  class="w3-hover-opacity" alt="Git">
+      <img src="github.JPG" style="width:100%"  class="w3-hover-opacity" alt="Git">
       </a>
+      <br><br> <br> 
+      <h2>GITHUB DIRECTORY</h2>
     </div>
 
     <div class="w3-col m3">
       <a href="http://52.70.29.87:8080/job/Deploy_on_DokcerHost_Container_using_Ansible/" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Ansible_logo.svg/1200px-Ansible_logo.svg.png" style="width:100%" class="w3-hover-opacity" alt="Ansible">
+      <img src="ansible.png" style="width:100%" class="w3-hover-opacity" alt="Ansible">
       </a>
+      <br><br> <br>
+      <h2>ANSIBLE SERVER</h2>
     </div>
 
     <div class="w3-col m3">
       <a href="https://hub.docker.com/repository/docker/ayoubbargaoui/simple-devops-image" target="_blank">
-      <img src="https://www.docker.com/sites/default/files/d8/2019-07/vertical-logo-monochromatic.png" style="width:100%" class="w3-hover-opacity" alt="Docker">
+      <img src="docker.PNG" style="width:100%" class="w3-hover-opacity" alt="Docker">
       </a>
+      <br><br> <br> <br> <br> 
+      <h2>DOCKERHUB DIRECTORY</h2>
     </div>
   </div>
 
   <div class="w3-row-padding w3-center w3-section">
     <div class="w3-col m3">
       <a href="http://52.73.141.42:31200/webapp/" target="_blank">
-      <img src="https://logos-download.com/wp-content/uploads/2018/09/Kubernetes_Logo.png" style="width:100%" class="w3-hover-opacity" alt="kubernetes">
+      <img src="kubernetes.PNG" style="width:100%" class="w3-hover-opacity" alt="kubernetes">
       </a>
+      <br>  
+      <h2>KUBERNETES</h2>
     </div>
 
     <div class="w3-col m3">
       <a href="http://3.218.204.136:9000/sonarqube/" target="_blank">
-      <img src="https://i.pinimg.com/originals/1c/c0/7a/1cc07a1ebac447213742940dd1ed2abe.jpg" style="width:100%" class="w3-hover-opacity" alt="Sonarqube">
+      <img src="sonar.JPG" style="width:100%" class="w3-hover-opacity" alt="Sonarqube">
       </a>
+      <br> <br> <br> 
+      <h2>SONARQUBE DASHBOARD</h2>
     </div>
 
     <div class="w3-col m3">
       <a href="https://fr.sonatype.com/product-nexus-repository" target="_blank">
-      <img src="https://xebialabs.com/wp-content/uploads/files/plugins/nexus.jpg" style="width:100%" class="w3-hover-opacity" alt="Nexus">
-      </a>
+      <img src="nexus.JPG" style="width:100%" class="w3-hover-opacity" alt="Nexus">
+      </a> 
+      <h2>NEXUS DIRECTORY</h2>
     </div>
 
     <div class="w3-col m3">
       <a href="https://tomcat.apache.org/" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Tomcat-logo.svg/1280px-Tomcat-logo.svg.png" style="width:100%" class="w3-hover-opacity" alt="Tomcat">
+      <img src="tomcat.PNG" style="width:100%" class="w3-hover-opacity" alt="Tomcat">
       </a>
+      <br> <br>  
+      <h2>TOMCAT SERVER</h2>
     </div>
   </div>
-  <div class="w3-content w3-container w3-padding-64" id="execute">
-    <div class="w3-container w3-padding-32" id="about">
-      <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Jobs execution :</h1>
-      <p>In this part you will find attached the jobs to be executed in one click! <br>
-        Indeed, we have 6 jobs: <br>
-        1. Between Jenkins, maven <br>
-        2. Between Jenkins and git, <br>
-        3. Between Jenkins, git and Tomcat,<br>
-        4. Between Jenkins, git, Tomcat and DockerHost <br>
-        5. Between Jenkins, git, Tomcat, Ansible and DockerHost <br>
-        6. Between Jenkins, git and DockerHub <br>
-        7. Between Jenkins, git, Tomcat, Anisble, DockerHub and Kubernetes (1 master and 2 clusters) <br>
-        8. Between Jenkins, git and Sonarqube 
-      </p>
+    <!-- End photo grid -->
     </div>
+  <!-- End Portfolio Section -->
   </div>
-    <div class="w3-row-padding w3-grayscale">
-      <div class="w3-col l3 m6 w3-margin-bottom">
-        <img src="job1.jpg" alt="John" style="width:100%">
-        <h3>Deploy on Tomcat Server using Jenkins</h3>
-        <p class="w3-opacity">CEO & Founder</p>
-        <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-        <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
-      </div>
-      <div class="w3-col l3 m6 w3-margin-bottom">
-        <img src="job2.jpg" alt="Jane" style="width:100%">
-        <h3>Deploy on Containers</h3>
-        <p class="w3-opacity">Architect</p>
-        <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-        <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
-      </div>
-      <div class="w3-col l3 m6 w3-margin-bottom">
-        <img src="job3.jpg" alt="Mike" style="width:100%">
-        <h3>Deploy_on_Container using Ansible</h3>
-        <p class="w3-opacity">Architect</p>
-        <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-        <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
-      </div>
-      <div class="w3-col l3 m6 w3-margin-bottom">
-        <img src="job4.jpg" alt="Dan" style="width:100%">
-        <h3>Dan Star</h3>
-        <p class="w3-opacity">Architect</p>
-        <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-        <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
-      </div>
-      <div class="w3-col l3 m6 w3-margin-bottom">
-        <img src="job5.jpg" alt="John" style="width:100%">
-        <h3>Deploy_on_kubernetes CI JOB</h3>
-        <p class="w3-opacity">CEO & Founder</p>
-        <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-        <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
-      </div>
-      <div class="w3-col l3 m6 w3-margin-bottom">
-        <img src="job6.jpg" alt="John" style="width:100%">
-        <h3>Nexus Artifactory</h3>
-        <p class="w3-opacity">CEO & Founder</p>
-        <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-        <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
-      </div>
-      <div class="w3-col l3 m6 w3-margin-bottom">
-        <img src="job7.jpg" alt="John" style="width:100%">
-        <h3>Deploy On Kubernetes using_Ansible</h3>
-        <p class="w3-opacity">CEO & Founder</p>
-        <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-        <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
-      </div>
-      <div class="w3-col l3 m6 w3-margin-bottom" >
-        <img src="job8.jpg" alt="John" style="width:100%">
-        <h3>Sonarqube Analyse</h3>
-        <p class="w3-opacity">Servers : Jenkins, Sonarqube</p>
-        <p>During this job, Jenkins will take the code from git and bring it to the sonarqube quality control server, the latter will provide a dashboard on the status of the code in details and the final status according to what we have.</p>
-        <p><a href="http://52.70.29.87:8080/job/My_First_Job/build?token=job0" target="_blank"><input type="button" value="EXECUTE" class="w3-button w3-light-grey w3-block" > </a></p>
-      </div>
-    </div> 
-</div>
+  <!-- Portfolio Section -->
+  <div class="w3-padding-64 w3-content" id="JOBS">
+    <h2 class="w3-text-light-grey">EXECUTE JOBS HERE !</h2>
+    <hr style="width:200px" class="w3-opacity">
+    <p>In this part you will find attached all jobs to be executed but in one click! You don't need to access to Jenkins and execute, HERE WE ARE ! GO...
+    <br> *********************************** JUST CLICK ON BUTTONS BELLOW AND YOU WILL GET PUSHED ! ***********************************
+    </p>
 
-
-<!-- Container (Contact Section) -->
-<div class="w3-content w3-container w3-padding-64" id="contact">
-  <h3 class="w3-center">WHERE I WORK</h3>
-  <p class="w3-center"><em>I'd love your feedback!</em></p>
-
-  <div class="w3-row w3-padding-32 w3-section">
-    <div class="w3-col m4 w3-container">
-      <img src="https://www.keejob.com/media/recruiter/recruiter_19891/logo-19891-20191202-161915.jpg" class="w3-image w3-round" style="width:100%" alt="hi">
-    </div>
-    <div class="w3-col m8 w3-panel">
-      <div class="w3-large w3-margin-bottom">
-        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> 3s, Montplaisir, Tunis<br>
-        <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +216 26 296 657<br>
-        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: ayoub.bargueoui@supcom.tn<br>
-      </div>
-      <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
-      <form action="/action_page.php" target="_blank">
-        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-          <div class="w3-half">
-            <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
-          </div>
-          <div class="w3-half">
-            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
-          </div>
+    <!-- Grid for photos -->
+     <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+     <div class="w3-row-padding">
+      <div class="w3-third w3-container w3-margin-bottom">
+        <img src="job1.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+          <p><b>Sonarqube Analyse</b></p>
+          <p>During this job, Jenkins will take the code from git and bring it to the sonarqube quality control server, the latter will provide a dashboard on the status of the code in details and the final status according to what we have.</p>
+          <p><button class="w3-button w3-light-grey w3-block">EXECUTE NOW !</button></p>
         </div>
-        <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
-        <button class="w3-button w3-black w3-right w3-section" type="submit">
+      </div>
+      <div class="w3-third w3-container w3-margin-bottom">
+        <img src="job2.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+          <p><b>Deploy on Tomcat Server using Jenkins</b></p>
+          <p>This job allows us to deploy your application which is in a git directory(GitHub) in a tomcat appache web server. (As another solution that replaces containerization).</p>
+          <p><button class="w3-button w3-light-grey w3-block">EXECUTE NOW !</button></p>
+        </div>
+      </div>
+      <div class="w3-third w3-container">
+        <img src="job3.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+          <p><b>Deploy on DockerHost using Jenkins</b></p>
+          <p>We are going to create a new job to copy our artifacts in DockerHost.(As soon as they are copied to DockerHost, we can create our own container).<br> Source file : webapp/target/*.war</p>
+          <p><button class="w3-button w3-light-grey w3-block">EXECUTE NOW !</button></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-row-padding">
+      <div class="w3-third w3-container w3-margin-bottom">
+        <img src="job4.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+          <p><b>Deploy on Container (On DockerHost) using Jenkins</b></p>
+          <p>This job is the continuation of job number 3, after the artifacts of the application are in the dockerhost server we will create a docker image and a container linked to this image.</p>
+          <p><button class="w3-button w3-light-grey w3-block">EXECUTE NOW !</button></p>
+        </div>
+      </div>
+      <div class="w3-third w3-container w3-margin-bottom">
+        <img src="job5.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+          <p><b>Deploy on Container (On DockerHost) using Ansible and Jenkins </b></p>
+          <p>The difference between this job and the previous job is that this one allows us to check if there is another container running and deleting it to create it after an update.</p>
+          <p><button class="w3-button w3-light-grey w3-block">EXECUTE NOW !</button></p>
+        </div>
+      </div>
+      <div class="w3-third w3-container">
+        <img src="job6.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+          <p><b>Deploy image on DockerHub and create Container (On DockerHost) using Ansible and Jenkins</b></p>
+          <p>A playbook will create an image and deploy it to our dockerhub directory then the dockerhost server will make a pull of this image and create an attached container.</p>
+          <p><button class="w3-button w3-light-grey w3-block">EXECUTE NOW !</button></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-row-padding">
+      <div class="w3-third w3-container w3-margin-bottom">
+        <img src="job7.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+          <p><b>Kubernetes CI JOB </b></p>
+          <p>This job will only create a docker image for our application and deploy it to our DockerHub directory. Once this job is successful, there will be automatic execution of job number 8 successively.</p>
+          <p><button class="w3-button w3-light-grey w3-block">EXECUTE NOW !</button></p>
+        </div>
+      </div>
+      <div class="w3-third w3-container w3-margin-bottom">
+        <img src="job8.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+          <p><b>Kubernetes CD JOB</b></p>
+          <p>This job will make a pull of our docker image in dockerhub and will then execute a container in our kubernetes nodes.
+            <br> This job can run automatically after job 7.</p>
+          <p><button class="w3-button w3-light-grey w3-block">EXECUTE NOW !</button></p>
+        </div>
+      </div>
+      <div class="w3-third w3-container">
+        <img src="job9.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+          <p><b>Deploy artifacts to Nexus</b></p>
+          <p>Instead of each time going to bring the code from Github, we can make a copy in Nexus and only make the modification made.
+            <br> This job allows us to save more time in deployment.</p>
+          <p><button class="w3-button w3-light-grey w3-block">EXECUTE NOW !</button></p>
+        </div>
+      </div>
+    </div>
+
+   
+  <!-- End Portfolio Section -->
+  </div>
+  <!-- Portfolio Section -->
+  <div class="w3-padding-64 w3-content" id="scripts">
+    <h2 class="w3-text-light-grey">OUR PLAYBOOKS AND SCRIPTS ANSIBLE ARE HERE !</h2>
+    <hr style="width:200px" class="w3-opacity">
+    <p>In this section you will find attached all the main Ansible playbooks and scripts developed in this project...
+      <br> *********************************** JUST CLICK ON BUTTONS BELLOW AND YOU WILL GET PUSHED ! ***********************************
+    </p>
+
+    <!-- Grid for photos -->
+     <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+     <div class="w3-row-padding">
+      <div class="w3-third w3-container w3-margin-bottom">
+        <img src="play1.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+          <p><b>Dockerfile</b></p>
+          <p>A Dockerfile is a text document that contains all the commands a user could call on the command line to assemble an image Docker.
+            <br> This file exists in these servers: DockerHost, Kubernetes Master, Ansible.
+          </p>
+          <a href="https://fr.scribd.com/document/461278832/Dockerfile" target="_blank"><p><button class="w3-button w3-light-grey w3-block">VIEW IT !</button></p></a>
+        </div>
+      </div>
+      <div class="w3-third w3-container w3-margin-bottom">
+        <img src="play2.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+          <p><b>Create Devops Image Docker (Playbook for DockerHost)</b></p>
+          <p>This playbook will create a Docker image, tag it, and push it on to our DockerHub directory, and delete it from Ansible Server to save space...
+            <br> This playbook acts only on the docker host server.
+          </p>
+          <a href="https://fr.scribd.com/document/461279997/Create-Simple-Devops-Image-Docker" target="_blank"><p><button class="w3-button w3-light-grey w3-block">VIEW IT !</button></p></a>
+        </div>
+      </div>
+      <div class="w3-third w3-container">
+        <img src="play3.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+          <p><b>Create Devops Project Docker (Playbook for DockerHost)</b></p>
+          <p>The role of this playbook is to: stop if we have old docker container, remove stopped docker container, remove current docker image too, pull docker image from dockerhub directory, create container.
+          <a href="https://fr.scribd.com/document/461280924/Create-Simple-Devops-Project-Docker" target="_blank"><p><button class="w3-button w3-light-grey w3-block">VIEW IT !</button></p></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-row-padding">
+      <div class="w3-third w3-container w3-margin-bottom">
+        <img src="play4.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+          <p><b>Create Devops Image Docker (Playbook for Ansible Server)</b></p>
+          <p>This playbook will create a Docker image, tag it, and push it on to our DockerHub directory, and delete it from Ansible Server to save space... This playbook acts only on the Ansible server (See Hosts).</p>
+          <a href="https://fr.scribd.com/document/461281814/Create-Simple-Devops-Image-Kubernetes" target="_blank"><p><button class="w3-button w3-light-grey w3-block">VIEW IT !</button></p></a>
+        </div>
+      </div>
+      <div class="w3-third w3-container w3-margin-bottom">
+        <img src="play5.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+          <p><b>Create deployment <br>(YAML for Kubernetes Nodes) </b></p>
+          <p>
+            This YAML file will deploy our application in the kubernetes nodes and from my DockerHub directory: ayoubbargaoui.<br> Location : Kubernetes Master <br> Will be used by playbook number 6. </p>
+          <a href="https://fr.scribd.com/document/461270846/Pfe-Deploy-Kubernetes" target="_blank"><p><button class="w3-button w3-light-grey w3-block">VIEW IT !</button></p></a>
+        </div>
+      </div>
+      <div class="w3-third w3-container">
+        <img src="play6.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+          <p><b>Execute deployment <br> (Playbook to execute the previous YAML)</b></p>
+          <p>This Ansible playbook will execute the YAML file located in Kubernetes Master and update deployment with new pods if image updated in docker hub.
+          </p>
+          <a href="https://fr.scribd.com/document/461284226/Deployment-Pfe-Kubernetes" target="_blank"><p><button class="w3-button w3-light-grey w3-block">VIEW IT !</button></p></a>
+        </div>
+      </div>
+    </div>
+    <div class="w3-row-padding">
+      <div class="w3-third w3-container w3-margin-bottom">
+        <img src="play7.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+          <p><b>Create service
+            <br> (YAML for Kubernetes Nodes) </b></p>
+          <p>This YAML file will create a service for users of our application in the kubernetes nodes on port 8080.
+            <br> Location : Kubernetes Master
+           <br> Will be used by playbook number 8.</p>
+          <a href="https://fr.scribd.com/document/461277512/Pfe-Service-Kubernetes" target="_blank"><p><button class="w3-button w3-light-grey w3-block">VIEW IT !</button></p></a>
+        </div>
+      </div>
+      <div class="w3-third w3-container w3-margin-bottom">
+        <img src="play8.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+          <p><b>Execute deployment
+            <br>(Playbook to execute the previous YAML)</b></p>
+          <p>This Ansible playbook will execute the previous YAML file located in Kubernetes Master to create a service.
+             </p>
+            <a href="https://fr.scribd.com/document/461285124/Service-Pfe-Kubernetes" target="_blank"><p><button class="w3-button w3-light-grey w3-block">VIEW IT !</button></p></a>
+        </div>
+      </div>
+      <div class="w3-third w3-container">
+        <img src="play9.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+          <p><b>Hosts file <br></b></p>
+          <p>A file that almost all computers and operating systems can use to map a connection between an IP address and domain names.
+            <br> Location : Ansible server (/opt/kubernetes and /opt/docker)</p>
+            <a href="https://fr.scribd.com/document/461286545/Hosts" target="_blank"><p><button class="w3-button w3-light-grey w3-block">VIEW IT !</button></p></a>
+        </div>
+      </div>
+    </div>
+    <!-- End Portfolio Section -->
+  </div>
+
+
+  <!-- Contact Section -->
+  <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+    <h2 class="w3-text-light-grey">Contact Us</h2>
+    <hr style="width:200px" class="w3-opacity">
+
+    <div class="w3-section">
+      <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> 3s, Montplaisir, Tunis</p>
+      <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: +216 26 296 657</p>
+      <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: ayoub.bargueoui@supcom.tn</p>
+    </div><br>
+    <p>Lets get in touch. Send me a message:</p>
+
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Subject" required name="Subject"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Message" required name="Message"></p>
+      <p>
+        <button class="w3-button w3-light-grey w3-padding-large" type="submit">
           <i class="fa fa-paper-plane"></i> SEND MESSAGE
         </button>
-      </form>
-    </div>
+      </p>
+    </form>
+  <!-- End Contact Section -->
   </div>
-</div>
-
-<!-- Footer -->
-<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
-  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-  <div class="w3-xlarge w3-section">
+  
+    <!-- Footer -->
+  <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
     <i class="fa fa-facebook-official w3-hover-opacity"></i>
     <i class="fa fa-instagram w3-hover-opacity"></i>
     <i class="fa fa-snapchat w3-hover-opacity"></i>
     <i class="fa fa-pinterest-p w3-hover-opacity"></i>
     <i class="fa fa-twitter w3-hover-opacity"></i>
     <i class="fa fa-linkedin w3-hover-opacity"></i>
-  </div>
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">:</a></p>
-  <img src="https://www.3s.com.tn/wp-content/uploads/2016/12/logo-footer.png" class="w3-image w3-round" style="width:8%" alt="hi" >
-</footer>
- 
-<script>
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
-function run(a) {
-  return a;
-}
-// Change style of navbar on scroll
-window.onscroll = function() {myFunction()};
-function myFunction() {
-    var navbar = document.getElementById("myNavbar");
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
-    } else {
-        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
-    }
-}
+    <p class="w3-medium">Powered by :</p>
+    <img src="https://www.3s.com.tn/wp-content/uploads/2016/12/logo-footer.png" class="w3-image w3-round" style="width:15%" alt="hi" >
+  <!-- End footer -->
+  </footer>
 
-// Used to toggle the menu on small screens when clicking on the menu button
-function toggleFunction() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else {
-        x.className = x.className.replace(" w3-show", "");
-    }
-}
-</script>
+<!-- END PAGE CONTENT -->
+</div>
 
 </body>
 </html>
-
